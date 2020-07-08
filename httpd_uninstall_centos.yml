@@ -1,0 +1,12 @@
+---
+- name: Uninstall Apache httpd
+  hosts: all
+  user: ansible
+  connection: ssh
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Uninstall httpd
+      yum: name=httpd state=absent
+    - name: Uninstall httpd-tools
+      yum: name=httpd-tools state=absent
