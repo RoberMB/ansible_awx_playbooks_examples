@@ -1,0 +1,9 @@
+--- # ping module example
+- name: Ejemplo ping
+  hosts: all
+  user: ansible
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Ping all the hosts
+      ping: 
